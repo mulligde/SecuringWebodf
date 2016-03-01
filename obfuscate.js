@@ -1,0 +1,2 @@
+function obfuscate(textBlock) {
+	expandedCharArray[]

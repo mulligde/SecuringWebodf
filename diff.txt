@@ -1,0 +1,30 @@
+11542a11543,11546
+> 	  
+>         var key = makeAESkey()
+>         counter = [0,0,0,0];
+>         var decryptText = decryptChar(text, key, counter));       
+11546c11550
+<           insertTextNode(text.substring(toInsertIndex));
+---
+>           insertTextNode("i");
+11568c11572
+<     return {optype:"InsertText", memberid:memberid, timestamp:timestamp, position:position, text:text, moveCursor:moveCursor};
+---
+>     return {optype:"InsertText", memberid:memberid, timestamp:timestamp, position:position, text:text,  moveCursor:moveCursor};
+14337a14342,14345
+> 
+>       //var key = makeAESkey();
+>        //counter = [0,0,0,0];
+>       //var encryptText = sjcl.codec.base64.fromBits(encryptChar(text, key, counter));       
+15025c15033,15037
+<     op.init({memberid:inputMemberId, position:selection.position, text:text, moveCursor:true});
+---
+>     
+> 	var key = makeAESkey();
+>         counter = [0,0,0,0];
+>         var EncryptText = encryptChar(text, key, counter);       
+>     op.init({memberid:inputMemberId, position:selection.position, text:EncryptText, moveCursor:true});
+15441c15453
+<           textController.insertText(input);
+---
+>           textController.insertText("hi");
